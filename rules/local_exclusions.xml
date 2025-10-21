@@ -1,0 +1,1279 @@
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120134" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Programs\\\\Remote Desktop\\\\(msrdc|msrdcw)\.exe$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from remote desktop msrdc</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120135" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Apps\\\\Remote Desktop\\\\(msrdc|msrdcw)\.exe$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from remote desktop msrdcw</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all Desktop clients -->
+<!--
+<rule id="120136" level="0">
+  <if_sid>92214</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files\(x86\)\\\\Microsoft Office\\\\Root\\\\Office16\\\\.*\.EXE$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Roaming\\\\Microsoft\\\\.*\\\\.*\\\\.*\.LNK$</field>
+  <description>Ignore alerts where Office creates .LNK files on all devices from specified path x86 (uppercase)</description>
+</rule>
+-->
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all Desktop clients -->
+<!--
+<rule id="120137" level="0">
+  <if_sid>92214</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files\(x86\)\\\\Microsoft Office\\\\root\\\\Office16\\\\.*\.EXE$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Roaming\\\\Microsoft\\\\.*\\\\.*\\\\.*\.LNK$</field>
+  <description>Ignore alerts where Office creates .LNK files on all devices from specified path (lowercase)</description>
+</rule>
+-->
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<!--
+<rule id="120138" level="0">
+  <if_sid>92214</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files\(x86\)\\\\Microsoft Office\\\\root\\\\Office16\\\\.*\.EXE$</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Roaming\\\\Microsoft\\\\Office\\\\Recent\\\\.*\.LNK$</field>
+  <description>Ignore alerts where Office creates .LNK files on all devices for x86 (lowercase)</description>
+</rule>
+-->
+
+<!-- Created by: slenderman39 -->
+<!-- Date: Updated 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120139" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\(x86\)\\\\Adobe\\\\Acrobat DC\\\\Acrobat\\\\ORG\user$</field>    	
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore alerts from Adobe for x86</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: Updated 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120140" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\CiscoSparkLauncher\\\\ORG\user$</field>    	
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from Cisco Collab Host</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: Updated 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120141" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\WebEx\\\\ORG\user$</field>    	
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from Webex</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: Updated 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120142" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\System32\\\\DriverStore\\\\FileRepository\\\\.*\\\\ORG\user$</field>    	
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from HP Hotkey Service</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120143" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\Reactive\\\\bin\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore N-able scriptrunner alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120144" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\ORG\user$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\.*\\\\.*\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore wsmprovhost alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120145" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\Windows Agent\\\\bin\\\\.*\.exe$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\.*\\\\.*\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore N-able agent and manager alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for PRTG only, only use this rule in extreme cases -->
+<rule id="120146" level="0">
+  <if_sid>110003</if_sid>
+  <field name="win.eventdata.workstationName" type="pcre2">(?i)^PRTG</field>
+  <field name="win.eventdata.subjectUserSid" type="pcre2">(?i)^S-1-0-00-0000000000-0000000000-0000000000-0000$</field>
+  <field name="win.eventdata.subjectLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.targetUserSid" type="pcre2">(?i)^S-1970-01-01-2326539457-3822848183-2381832050-1359$</field>
+  <field name="win.eventdata.targetUserName" type="pcre2">(?i)^prtg_sa$</field>
+  <field name="win.eventdata.targetDomainName" type="pcre2">(?i)^CENTERDATA$</field>
+    <field name="win.eventdata.logonType" type="pcre2">(?i)^3$</field>
+  <field name="win.eventdata.logonProcessName" type="pcre2">(?i)^NtLmSsp$</field>
+  <field name="win.eventdata.authenticationPackageName" type="pcre2">(?i)^NTLM$</field>
+  <field name="win.eventdata.lmPackageName" type="pcre2">(?i)^NTLM V2$</field>
+  <field name="win.eventdata.keyLength" type="pcre2">(?i)^128$</field>
+  <field name="win.eventdata.processId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.ipAddress" type="pcre2">(?i)^ORG\user\.ORG\user$</field> 
+  <field name="win.eventdata.impersonationLevel" type="pcre2">(?i)^..1833$</field>
+  <field name="win.eventdata.virtualAccount" type="pcre2">(?i)^..1843$</field>
+  <field name="win.eventdata.targetLinkedLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.elevatedToken" type="pcre2">(?i)^..1842$</field>
+  <description>Ignore Possible Golden Ticket attack or AD Certificate Service Abuse for PRTG monitoring software</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for THERMVDCFS01 only, only use this rule in extreme cases -->
+<rule id="120147" level="0">
+  <if_sid>110003</if_sid>
+  <field name="win.eventdata.workstationName" type="pcre2">(?i)^THERMVDCFS01</field>
+  <field name="win.eventdata.subjectUserSid" type="pcre2">(?i)^S-1-0-00-0000000000-0000000000-0000000000-0000$</field>
+  <field name="win.eventdata.subjectLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.targetUserSid" type="pcre2">(?i)^S-1970-01-01-2807546282-4174044716-3398846902-2195$</field>
+  <field name="win.eventdata.targetUserName" type="pcre2">(?i)^THERMVDCFS01\$$</field>
+  <field name="win.eventdata.targetDomainName" type="pcre2">(?i)^THERMOSOLAR$</field>
+    <field name="win.eventdata.logonType" type="pcre2">(?i)^3$</field>
+  <field name="win.eventdata.logonProcessName" type="pcre2">(?i)^NtLmSsp$</field>
+  <field name="win.eventdata.authenticationPackageName" type="pcre2">(?i)^NTLM$</field>
+  <field name="win.eventdata.lmPackageName" type="pcre2">(?i)^NTLM V1$</field>
+  <field name="win.eventdata.keyLength" type="pcre2">(?i)^128$</field>
+  <field name="win.eventdata.processId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.ipAddress" type="pcre2">(?i)^ORG\user\.ORG\user$</field> 
+  <field name="win.eventdata.impersonationLevel" type="pcre2">(?i)^..1833$</field>
+  <field name="win.eventdata.virtualAccount" type="pcre2">(?i)^..1843$</field>
+  <field name="win.eventdata.targetLinkedLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.elevatedToken" type="pcre2">(?i)^..1842$</field>
+  <description>Ignore Possible Golden Ticket attack or AD Certificate Service Abuse for Domain Controller File Service software</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120148" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\Application\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore chome app alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120149" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files*\\\\Microsoft Office\\\\(R|r)oot\\\\Office16\\\\.*\.EXE$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Office alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120150" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\Windows Agent\\\\bin\\\\.*\.exe$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\assembly\\\\GAC_MSIL\\\\ORG\user\.Automation\\.*\\ORG\user\.ORG\user$</field>
+  <description>Ignore N-able agent and manager alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120151" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Apps\\\\Remote Desktop\\\\ORG\user$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from remote desktop msrdc in app dir</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120152" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files\\\\Microsoft Monitoring Agent\\\\Agent\\\\ORG\user$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\.*\\\\.*\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore wsmprovhost alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120153" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\AutomationManagerEngine\\\\ORG\user\.exe$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\assembly\\\\GAC_MSIL\\\\ORG\user\.Automation\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore N-able agentservice alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120154" level="0">
+  <if_sid>92910</if_sid>
+    <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\Microsoft OneDrive\\\\ORG\user$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore alerts where all onedrive .exe processes access Explorer.EXE on all devices</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120155" level="0">
+  <if_sid>92910</if_sid>
+    <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\Common Files\\\\Microsoft Shared\\\\ClickToRun\\\\ORG\user$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts where office clicktorun processes access Explorer.EXE on all devices</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for FAR4 only, only use this rule in extreme cases -->
+<!--
+<rule id="120156" level="0">
+  <if_sid>110003</if_sid>
+  <field name="win.eventdata.workstationName" type="pcre2">(?i)^ARIRIRINA$</field>
+  <field name="win.eventdata.subjectUserSid" type="pcre2">(?i)^S-1-0-00-0000000000-0000000000-0000000000-0000$</field>
+  <field name="win.eventdata.subjectLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.targetUserSid" type="pcre2">(?i)^S-1970-01-01-2326539457-3822848183-2381832050-2933$</field>
+  <field name="win.eventdata.targetUserName" type="pcre2">(?i)^research.ahranovska$</field>
+  <field name="win.eventdata.targetDomainName" type="pcre2">(?i)^CENTERDATA$</field>
+    <field name="win.eventdata.logonType" type="pcre2">(?i)^3$</field>
+  <field name="win.eventdata.logonProcessName" type="pcre2">(?i)^NtLmSsp$</field>
+  <field name="win.eventdata.authenticationPackageName" type="pcre2">(?i)^NTLM$</field>
+  <field name="win.eventdata.lmPackageName" type="pcre2">(?i)^NTLM V2$</field>
+  <field name="win.eventdata.keyLength" type="pcre2">(?i)^128$</field>
+  <field name="win.eventdata.processId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.ipAddress" type="pcre2">(?i)^ORG\user\.ORG\user$</field> 
+  <field name="win.eventdata.impersonationLevel" type="pcre2">(?i)^..1833$</field>
+  <field name="win.eventdata.virtualAccount" type="pcre2">(?i)^..1843$</field>
+  <field name="win.eventdata.targetLinkedLogonId" type="pcre2">(?i)^0x0$</field>
+  <field name="win.eventdata.elevatedToken" type="pcre2">(?i)^..1843$</field>
+  <description>Ignore Possible Golden Ticket attack or AD Certificate Service Abuse for Domain Controller for research account</description>
+</rule>
+-->
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120157" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\Adobe\\\\Adobe Creative Cloud\\\\ACC\\\\Creative Cloud.*\.exe$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore Creative Cloud alert from Adobe</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120158" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\AutomationManagerAgent\\\\ORG\user\.exe$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\assembly\\\\GAC_MSIL\\\\ORG\user\.Automation\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore N-able manager agent service alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120159" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\DriverStore\\\\FileRepository\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore audio service from Realtek driver</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added svchost -->
+<rule id="120160" level="0">
+  <if_sid>92109</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^(C:\\\\Program Files \(x86\)\\\\N-able Technologies\\\\Windows Agent\\\\bin\\\\ORG\user|C:\\\\Windows\\\\System32\\\\ORG\user)$</field>
+  <field name="win.eventdata.sourceIp" type="pcre2">(?i)^ORG\user\.ORG\user$</field>
+  <field name="win.eventdata.destinationIp" type="pcre2">(?i)^ORG\user\.ORG\user$</field>
+  <field name="win.eventdata.destinationPort" type="pcre2">(?i)^3389$</field>
+  <description>Ignore n-able remote desktop service on local host</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for FAR4 only, only use this rule in extreme cases -->
+<rule id="120161" level="0">
+  <if_sid>110003</if_sid>
+  <!--  <field name="data.win.system.computer" type="pcre2">(?i)^FAR(1|2|3|4|5)\.ORG\user$</field> -->
+<field name="win.eventdata.subjectUserSid" type="pcre2">(?i)^S-1-0-00-0000000000-0000000000-0000000000-0000$</field>
+<field name="win.eventdata.subjectLogonId" type="pcre2">(?i)^0x0$</field>
+  <!-- <field name="data.win.eventdata.targetUserSid" type="pcre2">(?i)^S-1970-01-01-2326539457-3822848183-2381832050-*$</field> -->
+  <!-- <field name="data.win.eventdata.targetUserName" type="pcre2">(?i)^(FAR2*|FAR3*|FAR4*|FAR5*|research*|ORG\user)$</field> -->
+  <field name="win.eventdata.targetDomainName" type="pcre2">(?i)^CENTERDATA$</field>
+    <!-- <field name="data.win.eventdata.logonType" type="pcre2">(?i)^3$</field> -->
+    <!-- <field name="data.win.eventdata.logonProcessName" type="pcre2">(?i)^NtLmSsp$</field> -->
+    <!-- <field name="data.win.eventdata.authenticationPackageName" type="pcre2">(?i)^NTLM$</field> -->
+  <!-- <field name="data.win.eventdata.logonGuid" type="pcre2">(?i)^\{00000000-0000-0000-0000-000000000000}\}$</field>  -->
+  <!--   <field name="data.win.eventdata.lmPackageName" type="pcre2">(?i)^NTLM V2$</field> -->
+  <!-- <field name="data.win.eventdata.keyLength" type="pcre2">(?i)^128$</field> -->
+  <!-- <field name="data.win.eventdata.processId" type="pcre2">(?i)^0x0$</field> -->
+  <!-- <field name="data.win.eventdata.ipAddress" type="pcre2">(?i)^(..1|10*)$</field> -->
+  <!-- <field name="data.win.eventdata.impersonationLevel" type="pcre2">(?i)^..1833$</field> -->
+  <!-- <field name="data.win.eventdata.virtualAccount" type="pcre2">(?i)^..1843$</field> -->
+  <!-- <field name="data.win.eventdata.targetLinkedLogonId" type="pcre2">(?i)^0x0$</field> -->
+  <!-- <field name="data.win.eventdata.elevatedToken" type="pcre2">(?i)^..184(2|3)$</field> -->
+  <description>Ignore Possible Golden Ticket attack or AD Certificate Service Abuse for FAR 2,3,4 and 5 and research account</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120162" level="0">
+  <if_sid>92032</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files\\\\WindowsApps\\\\ORG\user[^\\\\]+\\\\dotnet\\\\ORG\user\.ORG\user$</field>
+  <field name="data.win.eventdata.currentDirectory" type="pcre2">(?i)^C:\\\\Program Files\\\\WindowsApps\\\\ORG\user[^\\\\]+\\\\dotnet\\\\$</field>
+  <description>Ignore benign Power Automate Desktop telemetry file creation (DataCollection-Bookmarks.json).</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+  <rule id="120163" level="0">
+    <if_sid>92052</if_sid>
+    <regex type="pcre2">(?i)queencreek</regex>
+    <description>Suppress QUEENCREEK-related cmd.exe activity: $(win.eventdata.commandLine)</description>
+  </rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120164" level="0">
+  <if_sid>92200,92217</if_sid>
+  <field name="data.win.eventdata.targetFilename">\\Temp\\RarSFX0\\.*</field>
+  <regex field="data.win.eventdata.image">\\RarSFX0\\bd[a-zA-Z0-9_]+\.exe$</regex>
+  <description>Suppress Bitdefender SFX activity: $(data.win.eventdata.image) created $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120165" level="0">
+  <if_sid>92200</if_sid>
+  <field name="data.win.eventdata.targetFilename">\\AppData\\Local\\Microsoft\\Office\\SolutionPackages\\.*\.js$</field>
+  <regex field="data.win.eventdata.image">\\Office16\\ORG\user$</regex>
+  <description>Suppress Microsoft Office SDXHelper JavaScript drop: $(data.win.eventdata.image) created $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120166" level="0">
+  <if_sid>92200</if_sid>
+  <field name="data.win.eventdata.targetFilename">\\AppData\\Local\\Microsoft\\Power Automate Desktop\\.*\.json$</field>
+  <regex field="data.win.eventdata.image">\\PowerAutomateDesktop_.*\\ORG\user\.ORG\user$</regex>
+  <description>Suppress Power Automate Desktop activity: $(data.win.eventdata.image) created $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120167" level="0">
+  <if_sid>92052</if_sid>
+  <field name="data.win.eventdata.parentImage">\\Adobe Creative Cloud Experience\\libs\\ORG\user$</field>
+  <field name="data.win.eventdata.commandLine">ORG\user.*/ORG\user QUERY .*Adobe\\\\CCXProcess.*</field>
+  <description>Suppress Adobe Creative Cloud CCX registry query via cmd.exe: $(data.win.eventdata.commandLine)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120168" level="0">
+  <if_sid>92200</if_sid>
+  <field name="data.win.eventdata.targetFilename">\\AppData\\Roaming\\Mozilla\\Firefox\\Background Tasks Profiles\\.*\\ORG\user$</field>
+  <regex field="data.win.eventdata.image">\\Mozilla Firefox\\ORG\user$</regex>
+  <description>Suppress Firefox background update JS write: $(data.win.eventdata.image) created $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120169" level="0">
+  <if_sid>92052</if_sid>
+  <field name="data.win.eventdata.parentImage">\\Google\\Chrome\\Application\\ORG\user$</field>
+  <regex field="data.win.eventdata.commandLine">ORG\user.*chrome-extension://[a-z0-9]+/.*</regex>
+  <description>Suppress Adobe Acrobat Native Messaging via Chrome: $(data.win.eventdata.commandLine)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120170" level="0">
+  <if_sid>92154</if_sid>
+  <field name="data.win.eventdata.image">\\Lenovo\\VantageService\\.*LenovoVantage-.*\.exe$</field>
+  <field name="data.win.eventdata.imageLoaded">\\SysWOW64\\ORG\user$</field>
+  <description>Suppress Lenovo Vantage update loading taskschd.dll: $(data.win.eventdata.image)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120171" level="0">
+  <if_sid>92157</if_sid>
+  <field name="data.win.eventdata.image">\\UUS\\Packages\\Preview\\amd64\\ORG\user$</field>
+  <regex field="data.win.eventdata.imageLoaded">\\Temp\\SSS_[a-z0-9]+\\downlevel\\ORG\user$</regex>
+  <description>Suppress Microsoft wuaucltcore.exe loading ucrtbase.dll from Windows Temp: $(data.win.eventdata.imageLoaded)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120172" level="0">
+  <if_sid>92910</if_sid>
+  <regex field="data.win.eventdata.sourceImage">\\Temp\\is-[a-zA-Z0-9]+\\.tmp\\CodeSetup-stable-[a-f0-9]{40}\\.tmp$</regex>
+  <field name="data.win.eventdata.targetImage">\\Windows\\ORG\user$</field>
+  <field name="data.win.eventdata.grantedAccess">0x40</field>
+  <description>Suppress benign VS Code installer access to Explorer (access=0x40): $(data.win.eventdata.sourceImage)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120173" level="0">
+  <if_sid>92151</if_sid>
+  <field name="data.win.eventdata.image">\\N-able Technologies\\AutomationManagerEngine\\.*\\ORG\user\.exe$</field>
+  <regex field="data.win.eventdata.imageLoaded">\\ORG\user\.ORG\user\.dll$</regex>
+  <description>Suppress N-able ScriptRunner PowerShell automation library load: $(data.win.eventdata.image)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120174" level="0">
+  <if_sid>92157</if_sid>
+  <field name="data.win.eventdata.image">\\Mozilla Firefox\\uninstall\\ORG\user$</field>
+  <regex field="data.win.eventdata.imageLoaded">\\Temp\\nsg[a-zA-Z0-9]+\\.tmp\\ORG\user$</regex>
+  <description>Suppress Mozilla Firefox uninstaller loading ShellLink.dll from temp: $(data.win.eventdata.imageLoaded)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120175" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Windows\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <field name="win.eventdata.callTrace" type="pcre2">(?i)^.*C:\\\\Program Files\\\\N-able Technologies\\\\AVDefender.*$</field>
+  <description>Ignore n-able software from using svchost.</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120176" level="0">
+  <if_sid>91822</if_sid>
+  <!-- <field name="win.system.providerName" type="pcre2">(?i)^ORG\user\-PowerShell$</field> -->
+  <field name="win.system.eventID" type="pcre2">(?i)^4104$</field>
+  <!-- <field name="win.system.version" type="pcre2">(?i)^1$</field> -->
+  <!-- <field name="win.system.level" type="pcre2">(?i)^3$</field> -->
+  <!-- <field name="win.system.task" type="pcre2">(?i)^2$</field> -->
+  <!-- <field name="win.system.opcode" type="pcre2">(?i)^15$</field> -->
+  <!-- <field name="win.system.keywords" type="pcre2">(?i)^0x0$</field> -->
+  <!-- <field name="win.system.channel" type="pcre2">(?i)^ORG\user\-PowerShell/Operational$</field> -->
+  <field name="win.system.computer" type="pcre2">(?i)^ORG\user\.nl$</field>
+  <!-- <field name="win.system.severityValue" type="pcre2">(?i)^WARNING$</field> -->
+  <description>Ignore invoke powershell from kusto explorer app on FAR systems</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added second sid -->
+<rule id="120177" level="0">
+  <if_sid>92157,92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\Framework\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\GAC_MSIL\\\\ORG\user\.Automation\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Suppress Microsoft mscorsvw to access dll</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110014" level="0">
+  <if_sid>92910</if_sid>
+  <field name="data.win.eventdata.sourceImage">\\N-able Technologies\\Reactive\\bin\\ORG\user$</field>
+  <field name="data.win.eventdata.targetImage">\\Windows\\ORG\user$</field>
+  <field name="data.win.eventdata.grantedAccess">0x1f3fff</field>
+  <description>Suppress N-able Reactive accessing Explorer with full access rights (0x1f3fff): $(data.win.eventdata.sourceImage)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110112" level="0">
+  <if_sid>92910</if_sid>
+  <regex field="data.win.eventdata.sourceImage">\\\\Users\\\\[^\\\\]+\\\\AppData\\\\Local\\\\Apps\\\\Remote Desktop\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.targetImage">\\\\WINDOWS\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.grantedAccess">^0x40$</regex>
+  <description>Excluded benign Explorer.EXE read-access by Microsoft Remote Desktop Client (msrdc.exe): $(data.win.eventdata.sourceImage)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110113" level="0">
+  <if_sid>92052</if_sid>
+  <regex field="data.win.eventdata.parentImage">\\\\WindowsAzure\\\\GuestAgent_.*?\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.commandLine">\\\\ORG\user\.JsonADDomainExtension\\\\.*?ORG\user.*$</regex>
+  <description>Excluded cmd.exe execution by Azure GuestAgent extension handler (enable.cmd): $(data.win.eventdata.commandLine)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110114" level="0">
+  <if_sid>92910</if_sid>
+  <regex field="data.win.eventdata.sourceImage">\\\\system32\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.targetImage">\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.grantedAccess">^0x101001$</regex>
+  <regex field="data.win.eventdata.callTrace">ORG\user</regex>
+  <description>Excluded benign read/query access to Explorer.EXE by svchost.exe (N-able AVDefender): $(data.win.eventdata.sourceImage)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110115" level="0">
+  <if_sid>101011</if_sid>
+  <regex field="data.win.eventdata.image">\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.targetFilename">\\\\CrashDumps\\\\ORG\user\..*?\.dmp$</regex>
+  <description>Excluded Windows Error Reporting (WerFault.exe) crash dump for svchost.exe: $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110109" level="0">
+  <if_sid>92157</if_sid>
+  <regex field="data.win.eventdata.image">\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.imageLoaded">\\\\Temp\\\\SSS_.*?\\\\downlevel\\\\ORG\user$</regex>
+  <description>Excluded Windows servicing DLL load by TiWorker.exe: $(data.win.eventdata.imageLoaded)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110110" level="0">
+  <if_sid>92151</if_sid>
+  <regex field="data.win.eventdata.image">\\\\Lenovo\\\\ImController\\\\PluginHost\\\\ORG\user\.ORG\user\.ORG\user$</regex>
+  <regex field="data.win.eventdata.imageLoaded">\\\\ORG\user\.ORG\user\.dll$</regex>
+  <description>Excluded benign PowerShell automation library load by Lenovo ImController CompanionApp: $(data.win.eventdata.imageLoaded)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110111" level="0">
+  <if_sid>101011</if_sid>
+  <regex field="data.win.eventdata.image">^System$</regex>
+  <regex field="data.win.eventdata.targetFilename">\\\\LiveKernelReports\\\\ORG\user-.*?\.dmp$</regex>
+  <description>Excluded legitimate kernel crash dump by System process: $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110107" level="0">
+  <if_sid>92217</if_sid>
+  <regex field="data.win.eventdata.image">\\\\Windows Defender\\\\Platform\\\\.*?\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.targetFilename">\\\\Windows\\\\Temp\\\\.*?\\\\ORG\user$</regex>
+  <description>Excluded DLL drop by Windows Defender engine (MsMpEng.exe): $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110108" level="0">
+  <if_sid>92200</if_sid>
+  <regex field="data.win.eventdata.image">\\\\Microsoft Office\\\\Root\\\\Office16\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.targetFilename">\\\\Microsoft\\\\Office\\\\SolutionPackages\\\\.*?\\.js$</regex>
+  <description>Excluded Office SDXHelper JavaScript package write: $(data.win.eventdata.targetFilename)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110104" level="0">
+  <if_sid>92151</if_sid>
+  <regex field="data.win.eventdata.image">\\\\N-able Technologies\\\\AutomationManagerAgent\\\\ORG\user\.exe$</regex>
+  <regex field="data.win.eventdata.imageLoaded">\\\\ORG\user\.ORG\user$</regex>
+  <description>Excluded valid PowerShell automation DLL load by N-able AutomationManager: $(data.win.eventdata.imageLoaded)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="110106" level="0">
+  <if_sid>92052</if_sid>
+  <regex field="data.win.eventdata.parentImage">\\\\WindowsAzure\\\\GuestAgent_.*?\\\\ORG\user$</regex>
+  <regex field="data.win.eventdata.image">\\\\System32\\\\ORG\user$</regex>
+  <description>Excluded cmd.exe execution by Azure GuestAgent's CollectGuestLogs.exe: $(data.win.eventdata.commandLine)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added image field to rule -->
+<rule id="120178" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\.*\\\\\ORG\user.*$</field>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\ORG\user\\\\ORG\user$</field>
+  <description>Ignore alerts coming from client regarding PSScriptPolicyTest in numeral subdir.</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added second executable -->
+<rule id="120179" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Google\\\\GoogleUpdater\\\\.*\\updater.exe$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping.*\\\\(.*_chrome_updater|UpdaterSetup|qualification_app)\.exe$</field>
+  <description>Ignore chome update alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: Allow legitimate HP OneAgent activity -->
+<rule id="120180" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\HP\\\\HP One Agent\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Allow legitimate HP OneAgent activity related to Explorer process access</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: Figma Explorer -->
+<rule id="120181" level="0">
+    <if_sid>92213,92910</if_sid>
+    <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Figma\\\\.*\\\\ORG\user$</field>
+    <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+    <description>Ignore Figma accessing Explorer alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added asteriks to include x86 folder -->
+<rule id="120182" level="0">
+    <if_sid>92213</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files.*\\\\TeamViewer\\\\ORG\user$</field>
+    <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\TeamViewer\\\\ORG\user$</field>
+    <description>Ignore TeamViewer update file creation alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120183" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping.*\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts where explorer.exe downloads Chrome updates</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120184" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\Application Compatibility Scripts\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\.*\\\\AppData\\\\Local\\\\Temp\\\\.*\\\\ORG\user$</field>
+  <description>Ignore alerts where compatibility script access getpaths</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120185" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\Microsoft\\\\Edge\\\\Application\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\scoped_dir.*\\\\CRX_INSTALL\\\\.*\.js$</field>
+  <description>Ignore alerts where chrome access .js files</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for gl.speaksee.ai, removed the pcre2 notation, added asteriks -->
+<rule id="120186" level="0">
+  <if_sid>40101</if_sid>
+  <match type="pcre2">(?i)^nobody$</match>
+  <match type="pcre2">(?i)^uid=0$</match>
+  <description>Ignore "System user successfully logged to the system" alert for nobody user login.</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added second windows filepath and escaped dash -->
+<rule id="120187" level="0">
+  <if_sid>61632</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\ORG\user$</field>
+  <field name="win.eventdata.commandLine" type="pcre2">(?i)^\\\\SystemRoot\\\\System32\\\\ORG\user .* C:\\\\(WINDOWS|Windows)\\\\System32\\\\ORG\user .*$</field>
+  <field name="win.eventdata.logonId" type="pcre2">(?i)^0x3e7$</field>
+  <field name="win.eventdata.integrityLevel" type="pcre2">(?i)^System$</field>
+  <description>Ignore alerts from smss accessing winlogon</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120188" level="0">
+  <if_sid>92211</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Windows\\\\Installer\\\\.*\\\\ORG\user$</field>
+  <description>Ignore alerts from wix website builder</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120189" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\LogiOptionsPlus\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore alerts from Logitech Utility Installer</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120190" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\System32\\\\DriverStore\\\\FileRepository\\\\.*\\\\NVWMI\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore alerts from NVWMI driver</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120191" level="0">
+  <if_sid>92211</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Windows\\\\Installer\\\\.*\\\\ORG\user$</field>
+  <description>Ignore HP One Agent software update alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120192" level="0">
+  <if_sid>92211</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Windows\\\\Installer\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore Wix software update alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120192" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\Application\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping.*\\\\.*\.js$</field>
+  <description>Ignore chome update javascript alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120193" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\Framework\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\NativeImages_.*\\\\System.*\\\\.*\\\\ORG\user\.ORG\user\.dll$</field>
+  <description>Suppress Microsoft mscorsvw to access dll</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120194" level="0">
+  <if_sid>92217</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\Windows\\\\ORG\user\\\\Framework64\\\\ORG\user\.30319\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <field name="win.eventdata.targetFilename" type="pcre2">
+    (?i)^C:\\\\Windows\\\\SystemTemp\\\\[^\\\\]+\.dll$
+  </field>
+  <description>Ignore legitimate SYSTEM-context csc.exe compilations that drop DLLs in C:\ORG\user across all endpoints</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120195" level="0">
+  <if_sid>92157</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^(?:C:\\\\Windows|C:\\\\\$WinREAgent\\\\Scratch\\\\[^\\\\]+)\\\\.*?\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">
+    (?i)^C:\\\\Windows\\\\Temp\\\\SSS_[^\\\\]+\\\\downlevel\\\\[^\\\\]+\.dll$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^Microsoft\\s+Windows$</field>
+  <field name="win.eventdata.company" type="pcre2">(?i)^Microsoft\\s+Corporation$</field>
+  <field name="win.eventdata.originalFileName" type="pcre2">(?i)^apisetstub$</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <description>Ignore legitimate SYSTEM-context DismHost.exe ApiSet DLL loads from C:\ORG\user\SSS_* on all endpoints</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120196" level="0">
+  <if_sid>92205</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\Windows\\\\(?:System32|SysWOW64)\\\\WindowsPowerShell\\\\ORG\user\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.targetFilename" type="pcre2">
+    (?i)^C:\\\\Windows\\\\SystemTemp\\\\__PSScriptPolicyTest_[^\\\\]+\.ps1$
+  </field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <description>Ignore legitimate SYSTEM-context PowerShell Script-Policy self-test in C:\ORG\user on all endpoints</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120197" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\(?:Program\\sFiles(?:\\s\\(x86\\))?|Users\\\\[^\\\\]+\\\\AppData\\\\Local)\\\\Google\\\\Chrome\\\\Application\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.targetFilename" type="pcre2">
+    (?i)^C:\\\\Users\\\\[^\\\\]+\\\\AppData\\\\Local\\\\Temp\\\\scoped_dir\\d+_\\d+\\\\CRX_INSTALL\\\\[^\\\\]+\\.(?:js|json|html|css|png|jpg|jpeg|gif|svg|wasm)$
+  </field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^(?!NT\\s+AUTHORITY\\\\SYSTEM)[^\\\\]+\\\\[^\\\\]+$
+  </field>
+  <description>Ignore interactive-user Chrome extension installation files under ORG\user*\CRX_INSTALL on all endpoints</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120198" level="0">
+  <if_sid>92213</if_sid>               -->
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\(?:Program\\sFiles(?:\\s\\(x86\\))?|Users\\\\[^\\\\]+\\\\AppData\\\\Local)\\\\TeamViewer\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.targetFilename" type="pcre2">
+    (?i)^C:\\\\Users\\\\[^\\\\]+\\\\AppData\\\\Local\\\\Temp\\\\TeamViewer\\\\update\\.(?:exe|dll|dat|tmp|log|json)$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^TeamViewer(\s+GmbH)?</field>
+  <field name="win.eventdata.company"  type="pcre2">(?i)^TeamViewer</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^(?!NT\\s+AUTHORITY\\\\)(?!NT\\s+SERVICE\\\\)(?!NT\\s+SYSTEM)(?!LOCAL\\s+SERVICE)(?!NETWORK\\s+SERVICE)[^\\\\]+\\\\[^\\\\]+$
+  </field>
+  <description>Suppress TeamViewer self-update drops (update.*) in Temp\\TeamViewer for interactive users only</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120199" level="0">
+  <if_sid>92157</if_sid>                                          
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\(?:Program Files(?: \\(x86\\))?|[^\\\\]+)\\\\TeamViewer(?:_portable)?\\\\Update\\\\update\\.exe$
+  </field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">
+    (?i)^C:\\\\Windows\\\\Temp\\\\nsu[0-9A-F]{4,}\\.tmp\\\\(?:Tv[A-Za-z0-9]+|TeamViewer_[A-Za-z0-9]+)\\.dll$
+  </field>
+  <field name="win.eventdata.company">TeamViewer Germany GmbH</field>
+  <field name="win.eventdata.signed">true</field>
+  <field name="win.eventdata.signatureStatus">Valid</field>
+  <field name="win.system.eventID">7</field>
+  <description>
+    Ignore TeamViewer updater loading its own signed DLLs from NSIS temp
+    folder (nsu*.tmp) – benign self-update behaviour.
+  </description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120200" level="0">
+  <if_sid>92157</if_sid>            
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\Windows\\\\(?:System32|WinSxS\\\\[^\\\\]+)\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">
+    (?i)^C:\\\\Windows\\\\Temp\\\\SSS_[^\\\\]+\\\\downlevel\\\\[^\\\\]+\.dll$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^Microsoft</field>
+  <field name="win.eventdata.company"  type="pcre2">(?i)^Microsoft</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <description>Ignore legitimate SYSTEM context TiWorker loads of Microsoft signed DLLs from C:\ORG\user\SSS_* on all endpoints</description>
+  <description>
+    ALERT – TiWorker.exe loaded an unsigned/tampered DLL **or** a DLL from an
+    unexpected Temp path. Possible servicing stack tamper or novel attack:
+    investigate immediately.
+  </description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120201" level="0">
+  <if_sid>92157</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\(?:Program\\sFiles(?:\\s\\(x86\\))?|Users\\\\[^\\\\]+\\\\AppData\\\\Local)\\\\TeamViewer\\\\Update\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">
+    (?i)^C:\\\\Windows\\\\Temp\\\\nsx[0-9a-f]+\.tmp\\\\[^\\\\]+\.dll$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^TeamViewer</field>
+  <field name="win.eventdata.company"  type="pcre2">(?i)^TeamViewer</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <description>Suppress TeamViewer SYSTEM context updater DLL loads in ORG\user*.tmp across all endpoints</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120202" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\(?:Program\\sFiles(?:\\s\\(x86\\))?|Users\\\\[^\\\\]+\\\\AppData\\\\Local)\\\\Google\\\\(?:GoogleUpdater|Update)(?:\\\\[^\\\\]+)?\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.targetFilename" type="pcre2">
+    (?i)^C:\\\\Users\\\\[^\\\\]+\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping\\d+_\\d+\\\\[^\\\\]+$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^Google</field>
+  <field name="win.eventdata.company"  type="pcre2">(?i)^Google</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^(?!NT\\s+AUTHORITY\\\\)(?!NT\\s+SERVICE\\\\)(?!LOCAL\\s+SERVICE)(?!NETWORK\\s+SERVICE)[^\\\\]+\\\\[^\\\\]+$
+  </field>
+  <description>
+    Ignore interactive user Google Updater file drops in
+    ORG\user* when the file is Google-signed and the
+    signature is valid.
+  </description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120203" level="0">
+  <if_sid>91841</if_sid>
+  <field name="win.eventdata.path" type="pcre2">
+    (?i)^C:\\\\ProgramData\\\\Microsoft\\\\Windows\\sDefender\\sAdvanced\\sThreat\\sProtection
+        \\\\DataCollection\\\\[0-9A-Fa-f.\\-]+\\\\[0-9A-Fa-f\\-]+\\.ps1$
+  </field>
+  <field name="win.eventdata.scriptBlockId" type="pcre2">
+    (?i)^{00000000-0000-0000-0000-000000000000}$
+  </field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <field name="win.eventdata.company" type="pcre2">
+    (?i)^Microsoft
+  </field>
+  <description>
+    Ignore Defender ATP SYSTEM context inventory script (GUID path + scriptBlockId) across all endpoints
+  </description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->           
+<rule id="120204" level="0">
+  <if_group>sysmon_eid7_detections</if_group>
+  <field name="win.eventdata.image" type="pcre2">
+    (?i)^C:\\\\Windows\\\\(?:System32|WinSxS\\\\[^\\\\]+)\\\\ORG\user$
+  </field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">
+    (?i)^C:\\\\Windows\\\\Temp\\\\SSS_[0-9A-Fa-f]+\\\\downlevel\\\\[^\\\\]+\.dll$
+  </field>
+  <field name="win.eventdata.signed" type="pcre2">(?i)^true$</field>
+  <field name="win.eventdata.signatureStatus" type="pcre2">(?i)^Valid$</field>
+  <field name="win.eventdata.signature" type="pcre2">(?i)^Microsoft</field>
+  <field name="win.eventdata.company"  type="pcre2">(?i)^Microsoft</field>
+  <field name="win.eventdata.user" type="pcre2">
+    (?i)^NT\\s+AUTHORITY\\\\SYSTEM$
+  </field>
+  <description>
+    Ignore legitimate Servicing Stack DLL loads: TiWorker.exe (SYSTEM) loading Microsoft signed
+    DLLs from C:\ORG\user\SSS_* \downlevel\ during Windows Update. Any deviation re-enables
+    the normal Sysmon EID 7 alert flow.
+  </description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120205" level="0">
+  <if_sid>92151</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user\\\\Framework\\\\.*\\\\ORG\user$</field>
+  <field name="win.eventdata.imageLoaded" type="pcre2">(?i)^C:\\\\Windows\\\\assembly\\\\NativeImages_.*\\\\System.*\\\\.*\\\\ORG\user\.ORG\user\.dll$</field>
+  <description>Suppress Microsoft mscorsvw to access dll</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120206" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\(Program Files|Program Files \(x86\))\\\\N-able Technologies\\\\Windows Agent\\\\AVDefender\\\\.*\.exe$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\(ORG\user|ORG\user)$</field>
+  <description>Ignore N-able AVDefender alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120207" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\(Program Files|Program Files \(x86\))\\\\N-able Technologies\\\\AVDefender\\\\.*\.exe$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\(ORG\user|ORG\user)$</field>
+  <description>Ignore N-able AVDefender alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120208" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\BeAnywhere Support Express\\\\GetSupportService_N-Central\\\\.*\.exe$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore BeAnywhere support alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120209" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files \(x86\)\\\\Adobe\\\\Adobe Sync\\\\CoreSync\\\\customhook\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Adobe Core Sync alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120210" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\ProgramData\\\\anaconda3\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\.*\\\\AppData\\\\Local\\\\Temp\\\\.*\\\\.*\\\\_build\\_static\\.*\.js$</field>
+  <description>Ignore python javascript dependency alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: removed parent in field name  -->
+<rule id="120211" level="0">
+  <if_sid>92058</if_sid>
+  <field name="win.eventdata.Image" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\svchost.exe$</field>
+  <field name="win.eventdata.CommandLine" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\svchost.exe \-k (LocalService|LocalSystemNetworkRestricted|LocalServiceNoNetwork) \-p \-s (PcaSvc|DeviceAssociationService|SSDPSRV|DPS|WwanSvc|SstpSvc|TrkWks|WdiServiceHost|tzautoupdate)$</field>
+  <description>Ignore application compatibility database start</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: applicable to all devices  -->
+<rule id="120212" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.Image" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Apps\\\\Remote Desktop\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\ORG\user$</field>
+  <description>Ignore Remote Desktop accessing msi file</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120213" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Windows\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\Windows\\\\ORG\user$</field>
+  <description>Ignore Windows Error Reporting Manager from accessing explorer.exe</description>
+</rule>
+
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120123" level="0">
+  <if_sid>91837</if_sid>
+  <field name="data.win.eventdata.path" type="pcre2">
+    (?i)^C:\\\\Packages\\\\Plugins\\\\ORG\user\.ORG\user\.Windows\\\\[^\\\\]+\\\\ORG\user$
+  </field>
+  <description>Ignore legitimate HandlerUtilities.psm1 execution (Microsoft Defender for Servers extension)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120124" level="0">
+    <if_sid>550,554,555</if_sid>              
+    <field name="syscheck.path" type="pcre2">
+      (?i)^C:\\\\Packages\\\\Plugins\\\\ORG\user\.ORG\user\.Windows\\\\[^\\\\]+\\\\ORG\user$
+    </field>
+    <description>HandlerUtilities.psm1 modified/added/deleted – possible path-hijack of Defender extension</description>
+    <mitre><id>T1565.001</id><technique>Stored Data Manipulation</technique><tactic>Impact</tactic></mitre>
+    <group>windows,fim,ossec</group>
+  </rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120125" level="0">
+  <if_sid>91837</if_sid>
+  <field name="win.eventdata.path" type="pcre2">
+    (?i)^C:\\\\ProgramData\\\\Microsoft\\\\Windows Defender Advanced Threat Protection\\\\DataCollection\\\\.*$
+  </field>
+  <field name="win.eventdata.scriptBlockText" type="pcre2">
+    (?i)Microsoft Corporation Code Signing
+  </field>
+  <description>Ignore Microsoft-signed ScriptBlocks written by MDATP DataCollection (all agents)</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: permanent for all clients -->
+<rule id="120214" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Roaming\\\\Zoom\\\\bin\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Zoom from accessing explorer.exe</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: these are permanent for all clients -->
+<rule id="120215" level="0">
+  <if_sid>92213</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping.*\\\\.*ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Temp\\\\chrome_Unpacker_BeginUnzipping.*\\\\.*\\\\ORG\user$</field>
+  <description>Ignore alerts where Chrome unpacker pdates</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added all additional parameters  -->
+<rule id="120216" level="0">
+  <if_sid>92058</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\svchost.exe$</field>
+  <field name="win.eventdata.CommandLine" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\svchost.exe \-k (LocalService|LocalSystemNetworkRestricted|LocalServiceNoNetwork) \-p \-s (PcaSvc|DeviceAssociationService|SSDPSRV|DPS|WwanSvc|SstpSvc|TrkWks|WdiServiceHost|tzautoupdate)$</field>
+  <description>Ignore application compatibility database start</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added all additional parameters  -->
+<rule id="120217" level="0">
+  <if_sid>92211</if_sid>
+  <field name="win.eventdata.image" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetFilename" type="pcre2">(?i)^C:\\\\Windows\\\\Installer\\\\.*\\\\ORG\user\.ORG\user$</field>
+  <description>Ignore access to windows task scheduler</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added all additional parameters  -->
+<rule id="120218" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Programs\\\\Microsoft VS Code\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Visual Studio Code accessing explorer.exe</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added all additional parameters  -->
+<rule id="120219" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Program Files\\\\LogiOptionsPlus\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Logitech Options application from accessing explorer.exe</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: added all additional parameters  -->
+<rule id="120220" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\system32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore Windows MRT from accessing explorer.exe</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: removed subdir -->
+<rule id="120221" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\Figma\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\(windows|WINDOWS)\\\\(explorer|Explorer)\.(exe|EXE)$</field>
+  <description>Ignore Figma software alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: removed subdir -->
+<rule id="120221" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Users\\\\.*\\\\AppData\\\\Local\\\\1Password\\\\1PasswordSetup.*\.exe$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\(windows|WINDOWS)\\\\(explorer|Explorer)\.(exe|EXE)$</field>
+  <description>Ignore Figma software alert</description>
+</rule>
+
+<!-- Created by: slenderman39 -->
+<!-- Date: 1970-01-01 -->
+<!-- Comment: removed subdir -->
+<rule id="120222" level="0">
+  <if_sid>92910</if_sid>
+  <field name="win.eventdata.sourceImage" type="pcre2">(?i)^C:\\\\Windows\\\\System32\\\\ORG\user$</field>
+  <field name="win.eventdata.targetImage" type="pcre2">(?i)^C:\\\\WINDOWS\\\\ORG\user$</field>
+  <description>Ignore mic tray alert</description>
+</rule>
